@@ -1268,3 +1268,19 @@ body.bulk-active .card-actions {
   color: var(--accent);
   font-size: 1.1rem;
 }
+
+
+/* fix for white box thingy when generate recipe */
+.ai-generated-html,
+.ai-generated-html * {
+  color: var(--text) !important;
+  background-color: transparent !important;
+}
+
+.ai-generated-html h3 {
+  color: var(--accent) !important;
+}
+
+.ai-generated-html li {
+  color: var(--text) !important;
+}
