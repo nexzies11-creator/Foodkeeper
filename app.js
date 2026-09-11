@@ -733,9 +733,11 @@ ${ingredientTextList}
 
 Requirements:
 - Propose 2 balanced recipes maximizing resource utilization.
-- Output directly as clean HTML text layout wrappers without any generic backtick string identifiers.
-- Use explicit visual layout blocks with specific headings.
-- Format with an <h3> tag for each recipe name (with a fitting food emoji).
+- Output ONLY clean HTML. Do NOT use inline CSS or style attributes.
+- Do NOT specify colors, backgrounds, borders, fonts, or other CSS.
+- Use only structural HTML tags.
+- Use an <h2> for the menu title.
+- Use an <h3> tag for each recipe name with a fitting food emoji.
 - Provide a <ul> list for ingredients.
 - Provide an <ol> list for step-by-step directions.`;
 
