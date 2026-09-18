@@ -1,4 +1,4 @@
-// ── FIREBASE UTILITY SETUP ──
+// ── firebase ──
 const firebaseConfig = {
   apiKey:            "AIzaSyAVCLcRZXQvUvvDm1L20TCY_GPwlX0btfg",
   authDomain:        "food-keeper-e2b1c.firebaseapp.com",
@@ -12,7 +12,7 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const db   = firebase.firestore();
 
-// ── GLOBAL INTERFACE CONSTANTS ──
+// ── food emoji for pantry tab ──
 const EMOJIS = {
   fridge:  ['🥛','🥚','🧀','🥩','🥦','🥕','🍅','🫐','🍓','🥬','🫒','🥒','🌶️'],
   freezer: ['🍦','🥩','🐟','🥐','🍕','🧊','🦐','🥟','🍗'],
@@ -103,7 +103,7 @@ function confetti() {
   }
 }
 
-// ── AUTHENTICATION MANAGEMENT SYSTEM ──
+// ── login function ──
 let authMode = 'login';
 
 function switchTab(mode) {
@@ -170,7 +170,7 @@ async function handleLogout() {
   await auth.signOut();
 }
 
-// ── AUTH STATE SNAPSHOT WITH INTEGRATED AUTO-PUTER SYNC ──
+// ── puter ai sync for login ──
 auth.onAuthStateChanged(async (user) => {
   const authScreen = document.getElementById('auth-screen');
   const appScreen  = document.getElementById('app');
@@ -186,7 +186,7 @@ auth.onAuthStateChanged(async (user) => {
     loadSettings();
     checkAndNotify();
     
-    // AUTOMATED SIGN-IN SYNCHRONIZATION WITH PUTER CLOUD STORAGE
+    // puter AI login
     if (window.puter) {
       try {
         if (!puter.auth.isSignedIn()) {
@@ -262,7 +262,7 @@ function loadSettings() {
 }
 
 // ── CORE APPLICATION TAB VIEW MANAGER ──
-// 1. UPDATE THE switchView FUNCTION IN YOUR APP.JS TO INCLUDE 'receipt'
+// UPDATED THE switchView FUNCTION TO INCLUDE 'receipt'
 function switchView(viewName) {
   currentView = viewName;
   
