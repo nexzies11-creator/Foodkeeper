@@ -1284,3 +1284,683 @@ body.bulk-active .card-actions {
 .ai-generated-html li {
   color: var(--text) !important;
 }
+
+.leaderboard-year-badge {
+  font-size: 12px;
+  color: var(--text3);
+  text-align: center;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.leaderboard-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.leaderboard-row {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: var(--shadow);
+}
+
+.leaderboard-row.top-1 { border-left: 4px solid #FFD700; }
+.leaderboard-row.top-2 { border-left: 4px solid #C0C0C0; }
+.leaderboard-row.top-3 { border-left: 4px solid #CD7F32; }
+
+.lb-rank { font-size: 22px; width: 32px; text-align: center; flex-shrink: 0; }
+.lb-info { flex: 1; }
+.lb-week { font-size: 14px; font-weight: 600; color: var(--text); }
+.lb-year { font-size: 11px; color: var(--text3); }
+.lb-amount { font-size: 18px; font-weight: 700; color: var(--red-text); font-family: var(--font-mono); }
+
+.leaderboard-footer {
+  text-align: center;
+  font-size: 12px;
+  color: var(--text3);
+  margin-top: 16px;
+}
+/* ═══════════════════════════════════════════════════════
+   AWARENESS PAGE
+   ═══════════════════════════════════════════════════════ */
+
+.awareness-hero {
+  background: linear-gradient(
+    135deg,
+    var(--green-bg) 0%,
+    var(--surface) 100%
+  );
+  border: 1px solid var(--green-border);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.awareness-hero-icon {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.awareness-hero-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.7px;
+  margin-bottom: 8px;
+}
+
+.awareness-hero-sub {
+  max-width: 680px;
+  margin: 0 auto;
+  color: var(--text2);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* ── Awareness Statistics ── */
+
+.awareness-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 1.6rem;
+}
+
+.awareness-stat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.2rem 1rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.awareness-stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.awareness-stat-card.red {
+  background: var(--red-bg);
+  border-color: var(--red-border);
+}
+
+.awareness-stat-card.amber {
+  background: var(--amber-bg);
+  border-color: var(--amber-border);
+}
+
+.awareness-stat-card.blue {
+  background: var(--blue-bg);
+  border-color: var(--blue-border);
+}
+
+.awareness-stat-card.green {
+  background: var(--green-bg);
+  border-color: var(--green-border);
+}
+
+.awareness-stat-num {
+  font-family: var(--font-mono);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 7px;
+}
+
+.awareness-stat-card.red .awareness-stat-num {
+  color: var(--red-text);
+}
+
+.awareness-stat-card.amber .awareness-stat-num {
+  color: var(--amber-text);
+}
+
+.awareness-stat-card.blue .awareness-stat-num {
+  color: var(--blue-text);
+}
+
+.awareness-stat-card.green .awareness-stat-num {
+  color: var(--green-text);
+}
+
+.awareness-stat-label {
+  color: var(--text2);
+  font-size: 11.5px;
+  line-height: 1.45;
+}
+
+
+/* ── Awareness Section Titles ── */
+
+.awareness-section-title {
+  font-size: 18px;
+  font-weight: 650;
+  color: var(--text);
+  margin: 1.8rem 0 0.8rem;
+  letter-spacing: -0.2px;
+}
+
+
+/* ── Awareness Information Cards ── */
+
+.awareness-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.awareness-info-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.2rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.awareness-info-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--border2);
+}
+
+.awareness-info-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--green-bg);
+  border-radius: var(--radius);
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.awareness-info-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.awareness-info-card p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text2);
+}
+
+
+/* ── 5R Framework ── */
+
+.awareness-5r-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.awareness-5r-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.1rem 0.8rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.awareness-5r-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.awareness-5r-card.r1 {
+  border-top: 3px solid var(--red-text);
+}
+
+.awareness-5r-card.r2 {
+  border-top: 3px solid var(--amber-text);
+}
+
+.awareness-5r-card.r3 {
+  border-top: 3px solid var(--blue-text);
+}
+
+.awareness-5r-card.r4 {
+  border-top: 3px solid var(--green-text);
+}
+
+.awareness-5r-card.r5 {
+  border-top: 3px solid var(--accent);
+}
+
+.r-num {
+  font-size: 10px;
+  color: var(--text3);
+  font-family: var(--font-mono);
+  margin-bottom: 4px;
+}
+
+.r-letter {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.r-icon {
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+
+.awareness-5r-card h3 {
+  font-size: 13px;
+  font-weight: 650;
+  color: var(--text);
+  margin-bottom: 7px;
+}
+
+.r-tip {
+  color: var(--text2);
+  font-size: 11.5px;
+  line-height: 1.45;
+}
+
+
+/* ── Awareness CTA ── */
+
+.awareness-cta {
+  background: var(--text);
+  color: var(--bg);
+  border-radius: var(--radius-xl);
+  padding: 1.6rem;
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: var(--shadow-md);
+}
+
+.awareness-cta-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.awareness-cta h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.awareness-cta p {
+  font-size: 13px;
+  line-height: 1.5;
+  opacity: 0.72;
+}
+
+
+/* ═══════════════════════════════════════════════════════
+   QUIZ PAGE
+   ═══════════════════════════════════════════════════════ */
+
+.quiz-header {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 1.3rem 1.4rem;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow);
+}
+
+.quiz-progress-text {
+  font-size: 12px;
+  color: var(--text2);
+  font-weight: 500;
+}
+
+.quiz-score-live {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.quiz-progress-bar {
+  height: 7px;
+  width: 100%;
+  background: var(--surface2);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.quiz-progress-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: inherit;
+  transition: width 0.3s ease;
+}
+
+
+/* ── Quiz Best Score ── */
+
+.quiz-best-top {
+  font-size: 12px;
+  color: var(--text3);
+  text-align: right;
+  margin: 8px 2px 12px;
+}
+
+.quiz-best-top strong {
+  color: var(--accent);
+}
+
+
+/* ── Quiz Question Card ── */
+
+.quiz-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 1.6rem;
+  box-shadow: var(--shadow);
+}
+
+.quiz-question {
+  font-size: 20px;
+  font-weight: 650;
+  line-height: 1.4;
+  color: var(--text);
+  margin-bottom: 1.3rem;
+  letter-spacing: -0.25px;
+}
+
+
+/* ── Quiz Options ── */
+
+.quiz-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.quiz-opt-btn {
+  width: 100%;
+  min-height: 58px;
+  padding: 11px 13px;
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-lg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 13.5px;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    transform 0.1s ease;
+}
+
+.quiz-opt-btn:hover:not(:disabled) {
+  background: var(--surface2);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.quiz-opt-btn:disabled {
+  cursor: default;
+}
+
+.quiz-opt-letter {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--surface2);
+  color: var(--text2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+
+/* ── Quiz Feedback ── */
+
+.quiz-feedback {
+  margin-top: 12px;
+  padding: 11px 13px;
+  border-radius: var(--radius);
+  font-size: 13px;
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+.quiz-feedback.correct-fb {
+  background: var(--green-bg);
+  border: 1px solid var(--green-border);
+  color: var(--green-text);
+}
+
+.quiz-feedback.wrong-fb {
+  background: var(--red-bg);
+  border: 1px solid var(--red-border);
+  color: var(--red-text);
+}
+
+
+/* ── Quiz Answer States ── */
+
+.quiz-opt-btn.correct {
+  background: var(--green-bg);
+  border-color: var(--green-border);
+  color: var(--green-text);
+}
+
+.quiz-opt-btn.correct .quiz-opt-letter {
+  background: var(--green-text);
+  color: var(--green-bg);
+}
+
+.quiz-opt-btn.wrong {
+  background: var(--red-bg);
+  border-color: var(--red-border);
+  color: var(--red-text);
+}
+
+.quiz-opt-btn.wrong .quiz-opt-letter {
+  background: var(--red-text);
+  color: var(--red-bg);
+}
+
+
+/* ── Quiz Next Button ── */
+
+#quiz-next-btn {
+  width: 100%;
+  margin-top: 12px;
+  padding: 11px 15px;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--text);
+  color: var(--bg);
+  font-family: var(--font);
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.1s;
+}
+
+#quiz-next-btn:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+#quiz-next-btn:active {
+  transform: translateY(0);
+}
+
+
+/* ═══════════════════════════════════════════════════════
+   QUIZ RESULT SCREEN
+   ═══════════════════════════════════════════════════════ */
+
+.quiz-result-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 2.2rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.quiz-result-icon {
+  font-size: 52px;
+  margin-bottom: 10px;
+}
+
+.quiz-result-title {
+  font-size: 23px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.quiz-result-score {
+  font-family: var(--font-mono);
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1.1;
+}
+
+.quiz-result-pct {
+  font-size: 14px;
+  color: var(--text2);
+  margin-top: 5px;
+}
+
+.quiz-best {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: var(--green-bg);
+  border: 1px solid var(--green-border);
+  color: var(--green-text);
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.quiz-result-card .action-btn {
+  margin-top: 18px;
+}
+
+
+/* ═══════════════════════════════════════════════════════
+   AWARENESS + QUIZ RESPONSIVE DESIGN
+   ═══════════════════════════════════════════════════════ */
+
+@media (max-width: 900px) {
+  .awareness-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .awareness-5r-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .awareness-hero {
+    padding: 1.5rem 1.1rem;
+  }
+
+  .awareness-hero-title {
+    font-size: 22px;
+  }
+
+  .awareness-stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .awareness-stat-card {
+    padding: 1rem 0.7rem;
+  }
+
+  .awareness-stat-num {
+    font-size: 23px;
+  }
+
+  .awareness-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .awareness-5r-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .awareness-cta {
+    align-items: flex-start;
+    padding: 1.2rem;
+  }
+
+  .quiz-card {
+    padding: 1.2rem;
+  }
+
+  .quiz-question {
+    font-size: 18px;
+  }
+
+  .quiz-options {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .awareness-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .awareness-5r-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .awareness-stat-num {
+    font-size: 25px;
+  }
+
+  .quiz-header {
+    padding: 1rem;
+  }
+
+  .quiz-card {
+    padding: 1rem;
+  }
+
+  .quiz-result-card {
+    padding: 1.7rem 1rem;
+  }
+}
