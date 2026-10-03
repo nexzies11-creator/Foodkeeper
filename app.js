@@ -1,3 +1,4 @@
+
 // ── FIREBASE UTILITY SETUP ──
 const firebaseConfig = {
   apiKey:            "AIzaSyAVCLcRZXQvUvvDm1L20TCY_GPwlX0btfg",
